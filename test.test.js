@@ -35,3 +35,7 @@ test("Caesar Cipher", () => {
   expect(caesarCipher(1, "With each step, new adventures unfolded on the path ahead.")).toBe("Xjui fbdi tufq, ofx bewfouvsft vogpmefe po uif qbui bifbe.");
   expect(caesarCipher(-1, "Whispers of the past lingered in the abandoned corridors.")).toBe("Vghrodqr ne sgd ozrs khmfdqdc hm sgd zazmcnmdc bnqqhcnqr.");
 })
+
+test("Analyze Array", () => {
+  
+})

@@ -1,3 +1,8 @@
+// Fixes the negative modulo
+function mod(n, m) {
+  return ((n % m) + m) % m;
+}
+
 function capitalize(string) {
   return string[0].toUpperCase() + string.slice(1).toLowerCase();
 }
@@ -29,10 +34,10 @@ function shiftCharacter(shift, char) {
   // check if it is lowercase
   // 96 is the starting unicode for lowercase
   if (char.charCodeAt(0) > 96) {
-    return String.fromCharCode(((char.charCodeAt(0) + shift - 97) % 26) + 97);
+    return String.fromCharCode(mod((char.charCodeAt(0) + shift - 97), 26) + 97);
   }
-
-  return String.fromCharCode(((char.charCodeAt(0) + shift - 65) % 26) + 65);
+  
+  return String.fromCharCode(mod((char.charCodeAt(0) + shift - 65), 26) + 65);
 }
 
 function caesarCipher(shift, string) {
@@ -43,4 +48,8 @@ function caesarCipher(shift, string) {
   return res;
 }
 
-export { capitalize, reverseString, calculator, caesarCipher }
+function analyzeArray(arr) {
+
+}
+
+export { capitalize, reverseString, calculator, caesarCipher, analyzeArray }
